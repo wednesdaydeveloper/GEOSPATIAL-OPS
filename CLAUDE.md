@@ -104,7 +104,7 @@
 | やりたいこと | 触る場所 |
 |---|---|
 | 地軸を傾ける | `const ROLL`（0=垂直、`-23.5*Math.PI/180`等で傾き） |
-| 自転速度 | `draw()` 内 `earthSpin += dt*0.10`、`simTime += dt*0.10` |
+| 自転速度 | `draw()` 内 `earthSpin -= dt*0.10`（符号は順行＝東向き自転に合わせて負。`+=` にすると逆回転）、`simTime += dt*0.10` |
 | 衛星の数/高さ/速度 | `sats` 生成ループ（`rmul`/`speed`/`inc`） |
 | 大陸の色・濃さ | `fillGlobe()` の `d[p]=..` RGBA |
 | 海岸線/経線の濃さ | `draw()` の coastline / `dl()` の `globalAlpha`・色 |

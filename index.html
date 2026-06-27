@@ -360,7 +360,7 @@ function draw(dt){
   ctx.clearRect(0,0,W,H);
   simTime+=dt*0.10;
   if(dragging) idleT=0; else idleT+=dt;
-  if(!reduced && !dragging && idleT>2.5) earthSpin+=dt*0.10;
+  if(!reduced && !dragging && idleT>2.5) earthSpin-=dt*0.10;
   earthAngle=earthSpin+dragYaw;
 
   let g=ctx.createRadialGradient(CX,CY,R*0.7,CX,CY,R*1.5);
